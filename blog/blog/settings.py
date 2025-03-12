@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 
     'Auth_app',
+    'Forms_app',
 ]
 
 MIDDLEWARE = [
