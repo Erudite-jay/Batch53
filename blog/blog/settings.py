@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMP_DIR= os.path.join(BASE_DIR,'Templates')
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'Auth_app',
     'Forms_app',
     'Session_app',
+    'JWT_app',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,11 @@ STATICFILES_DIRS=(
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
