@@ -24,3 +24,5 @@ urlpatterns = [
     path('session/', include("Session_app.urls")),
     path('jwt/',include("JWT_app.urls"))
 ]
+
+

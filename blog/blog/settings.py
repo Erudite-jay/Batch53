@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'Session_app',
     'JWT_app',
     'Signal_app',
+    'Channels_app',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +81,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'blog.wsgi.application'
+# WSGI_APPLICATION = 'blog.wsgi.application'
+ASGI_APPLICATION='blog.asgi.application'
 
 
 # Database
